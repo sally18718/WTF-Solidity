@@ -34,6 +34,8 @@ contract CallContract{
     function callGetX(OtherContract _Address) external view returns(uint x){
         x = _Address.getX();
     }
+    // OtherContract _Address, 先创对象 由_Address调用getX()函数
+  
 
     function callGetX2(address _Address) external view returns(uint x){
         OtherContract oc = OtherContract(_Address);
